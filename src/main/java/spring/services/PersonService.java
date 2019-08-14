@@ -7,4 +7,6 @@ public interface PersonService extends PersonRepository {
 
     public Person save(Person person);
 
+    public Person findByname(String name);
+
 }
