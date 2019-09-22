@@ -1,7 +1,7 @@
-package spring.services;
+package co.uk.richardpricejones.app.services;
 
-import spring.models.Person;
-import spring.models.Repository.PersonRepository;
+import co.uk.richardpricejones.app.Repository.PersonRepository;
+import co.uk.richardpricejones.app.resources.Person;
 
 import java.util.List;
 import java.util.Optional;

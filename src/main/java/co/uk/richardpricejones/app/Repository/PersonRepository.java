@@ -1,8 +1,8 @@
-package spring.models.Repository;
+package co.uk.richardpricejones.app.Repository;
 
+import co.uk.richardpricejones.app.resources.Person;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Component;
-import spring.models.Person;
 
 import java.util.List;
 import java.util.Optional;

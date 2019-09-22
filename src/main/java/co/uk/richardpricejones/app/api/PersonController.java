@@ -1,9 +1,9 @@
-package spring.api;
+package co.uk.richardpricejones.app.api;
 
 
+import co.uk.richardpricejones.app.resources.Person;
+import co.uk.richardpricejones.app.services.impl.PersonServiceImpl;
 import org.springframework.web.bind.annotation.*;
-import spring.models.Person;
-import spring.services.impl.PersonServiceImpl;
 
 import java.util.List;
 import java.util.logging.Logger;

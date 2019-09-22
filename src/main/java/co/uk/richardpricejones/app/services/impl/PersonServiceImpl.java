@@ -1,8 +1,8 @@
-package spring.services.impl;
+package co.uk.richardpricejones.app.services.impl;
 
+import co.uk.richardpricejones.app.Repository.PersonRepository;
+import co.uk.richardpricejones.app.resources.Person;
 import org.springframework.stereotype.Service;
-import spring.models.Person;
-import spring.models.Repository.PersonRepository;
 
 import java.util.List;
 import java.util.Optional;

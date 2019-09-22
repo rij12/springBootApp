@@ -1,4 +1,4 @@
-package spring.models;
+package co.uk.richardpricejones.app.resources;
 
 import java.util.UUID;
 

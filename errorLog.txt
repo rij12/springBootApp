@@ -18,7 +18,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
-	at spring.Main.main(Main.java:11) [classes/:na]
+	at Main.main(Main.java:11) [classes/:na]
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'personServiceImpl' defined in file [C:\Users\richj\Documents\GitHub\springBootApp\target\classes\spring\services\impl\PersonServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'personRepository': Invocation of init method failed; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property save found for type Person! Did you mean 'name','age'?
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:769) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:218) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
