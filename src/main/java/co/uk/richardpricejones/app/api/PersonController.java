@@ -1,6 +1,7 @@
 package co.uk.richardpricejones.app.api;
 
 
+import co.uk.richardpricejones.app.exceptions.PersonNotFoundException;
 import co.uk.richardpricejones.app.resources.Person;
 import co.uk.richardpricejones.app.services.impl.PersonServiceImpl;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +13,7 @@ import java.util.logging.Logger;
 public class PersonController {
 
     private PersonServiceImpl personService;
-    private static final Logger LOGGER = Logger.getLogger( PersonController.class.getName() );
+    private static final Logger LOGGER = Logger.getLogger(PersonController.class.getName());
 
     public PersonController(PersonServiceImpl personService){
         this.personService = personService;
@@ -44,10 +45,10 @@ public class PersonController {
         return people;
     }
 
+    // TODO Replace sending POJO's to HTTP Entities.
     @RequestMapping(value = {"/person/find/{id}"}, method = RequestMethod.GET)
-    public Person getPersonById(@PathVariable String id){
+    public Person getPersonById(@PathVariable String id) throws PersonNotFoundException {
         LOGGER.info("Person Request id" + id);
-        Person p = personService.findById(id);
-        return p;
+        return personService.findById(id);
     }
 }
