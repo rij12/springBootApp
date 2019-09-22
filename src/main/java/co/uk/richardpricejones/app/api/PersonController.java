@@ -4,6 +4,7 @@ package co.uk.richardpricejones.app.api;
 import co.uk.richardpricejones.app.exceptions.PersonNotFoundException;
 import co.uk.richardpricejones.app.resources.Person;
 import co.uk.richardpricejones.app.services.impl.PersonServiceImpl;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,7 +20,9 @@ public class PersonController {
         this.personService = personService;
     }
 
+
     @RequestMapping(value = "/person", method = RequestMethod.POST)
+    @Secured("ROLE_USER")
     public Person createPerson(@RequestBody Person p){
 
         System.out.println(p.toString());
@@ -39,6 +42,7 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/person/findall", method = RequestMethod.GET)
+    @Secured("ROLE_USER")
     public List<Person> getAllPerson(){
         List<Person> people = personService.findAll();
         System.out.println(people);
