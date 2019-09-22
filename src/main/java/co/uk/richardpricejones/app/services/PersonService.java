@@ -1,6 +1,6 @@
 package co.uk.richardpricejones.app.services;
 
-import co.uk.richardpricejones.app.Repository.PersonRepository;
+import co.uk.richardpricejones.app.repository.PersonRepository;
 import co.uk.richardpricejones.app.resources.Person;
 
 import java.util.List;

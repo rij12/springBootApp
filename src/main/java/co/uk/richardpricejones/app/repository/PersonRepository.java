@@ -1,4 +1,4 @@
-package co.uk.richardpricejones.app.Repository;
+package co.uk.richardpricejones.app.repository;
 
 import co.uk.richardpricejones.app.resources.Person;
 import org.springframework.data.mongodb.repository.MongoRepository;
