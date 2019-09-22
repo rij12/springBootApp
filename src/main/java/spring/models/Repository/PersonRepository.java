@@ -5,12 +5,16 @@ import org.springframework.stereotype.Component;
 import spring.models.Person;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Component
 public interface PersonRepository extends MongoRepository<Person, String> {
+    
+    public List<Person> findByName(String name);
 
-    public Person findByname(String name);
-//    public List<Person> findByName(String name, int age);
+    public Optional<Person> findById(String id);
+
+    public List<Person> findAll();
 
 }

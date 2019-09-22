@@ -4,6 +4,9 @@ import org.springframework.stereotype.Service;
 import spring.models.Person;
 import spring.models.Repository.PersonRepository;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class PersonServiceImpl {
 
@@ -21,12 +24,22 @@ public class PersonServiceImpl {
         return person;
     }
 
-    public Person findByName(String name){
+    public List<Person> findByName(String name){
         System.out.println("Search Term:" + name);
-        Person p =  personRepository.findByname(name);
+        List<Person> p =  personRepository.findByName(name);
         return p;
     }
 
+    public List<Person> findAll(){
+        List<Person> people = personRepository.findAll();
+        return people;
+    }
+
+    public Person findById(String id){
+        System.out.println("Provided Id"+id);
+        Optional<Person> person = personRepository.findById(id);
+        return person.get();
+    }
 
 
 

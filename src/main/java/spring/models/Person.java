@@ -1,16 +1,20 @@
 package spring.models;
 
+import java.util.UUID;
+
 public class Person {
 
 
     private String name;
     private int age;
     private Job job;
+    private String id;
 
     public Person(String name, int age, Job job) {
         this.name = name;
         this.age = age;
         this.job = job;
+        this.id = UUID.randomUUID().toString();
     }
 
     public String getName() {
@@ -43,6 +47,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", job=" + job +
+                ", id='" + id + '\'' +
                 '}';
     }
 }
