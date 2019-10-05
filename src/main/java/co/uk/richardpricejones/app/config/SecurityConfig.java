@@ -29,6 +29,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().csrf().disable();
     }
 
+
+    // Testing LDAP!
     @Bean
     public UserDetailsService userDetailsService() {
         return new UserDetailsService() {

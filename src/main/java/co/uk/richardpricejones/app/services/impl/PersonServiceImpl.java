@@ -22,9 +22,8 @@ public class PersonServiceImpl {
     }
 
     public Person save(Person person){
-        System.out.println(person);
         Person p = personRepository.save(person);
-        LOGGER.info("This is save to the database:" + p.toString());
+        LOGGER.info("Person save to database" + p.toString());
         return person;
     }
 
@@ -39,7 +38,6 @@ public class PersonServiceImpl {
     }
 
     public Person findById(String id) throws PersonNotFoundException {
-        System.out.println("Provided Id"+id);
         Optional<Person> person = personRepository.findById(id);
         if (person.isPresent()) {
             return person.get();
@@ -48,7 +46,4 @@ public class PersonServiceImpl {
         }
 
     }
-
-
-
 }

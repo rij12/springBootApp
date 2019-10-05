@@ -11,10 +11,10 @@ import java.util.Optional;
 @Component
 public interface PersonRepository extends MongoRepository<Person, String> {
     
-    public List<Person> findByName(String name);
+    List<Person> findByName(String name);
 
-    public Optional<Person> findById(String id);
+    Optional<Person> findById(String id);
 
-    public List<Person> findAll();
+    List<Person> findAll();
 
 }

@@ -22,19 +22,15 @@ public class PersonController {
 
 
     @RequestMapping(value = "/person", method = RequestMethod.POST)
+    // Testing LDAP intergration!
     @Secured("ROLE_USER")
     public Person createPerson(@RequestBody Person p){
-
-        System.out.println(p.toString());
-        // Save to the DB
         personService.save(p);
         return p;
     }
 
     @RequestMapping(value = "/person/find", method = RequestMethod.POST)
     public List<Person> getPerson(@RequestBody String name){
-        System.out.println("Name Requested: " + name);
-
         // Load from DB
         List<Person> foundPerson = personService.findByName(name);
         System.out.println("Person Found: " + foundPerson);

@@ -8,12 +8,12 @@ import java.util.Optional;
 
 public interface PersonService extends PersonRepository {
 
-    public Person save(Person person);
+    Person save(Person person);
 
-    public List<Person> findByName(String name);
+    List<Person> findByName(String name);
 
-    public List<Person> findAll();
+    List<Person> findAll();
 
-    public Optional<Person> findById();
+    Optional<Person> findById();
 
 }
